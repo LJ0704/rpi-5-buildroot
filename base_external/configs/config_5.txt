@@ -12,3 +12,7 @@ kernel=Image
 # Disable overscan assuming the display supports displaying the full resolution
 # If the text shown on the screen disappears off the edge, comment this out
 disable_overscan=1
+
+# Enable UART for serial console on RPi5
+enable_uart=1
+dtoverlay=uart0-pi5
