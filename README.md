@@ -27,3 +27,9 @@ For model 3 B and B+:
 For model 4 B:
 
   $ make raspberrypi4_defconfig
+  
+  
+  Note: 
+  Initially I faced issue relate Device tree blob (dtb) due to conflict on BCM2712 based on Rpi 5 RAM 
+  Fix: the below blog helped me how to work around with this issue 
+  https://hub.mender.io/t/asynchronous-serror-interrupt-rpi5-boot-issue/7275
