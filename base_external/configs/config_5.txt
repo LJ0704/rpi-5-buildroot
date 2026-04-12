@@ -20,3 +20,5 @@ disable_overscan=1
 enable_uart=1
 device_tree=bcm2712d0-rpi-5-b.dtb
 dtoverlay=vc4-kms-v3d
+dtparam=pciex1
+dtparam=pciex1_gen=3
