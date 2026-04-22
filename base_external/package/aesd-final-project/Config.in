@@ -1,0 +1,27 @@
+config BR2_PACKAGE_AESD_FINAL_PROJECT
+	bool "aesd-final-project"
+	depends on BR2_LINUX_KERNEL
+	depends on BR2_PACKAGE_PARTED
+	depends on BR2_PACKAGE_NVME
+	depends on BR2_PACKAGE_KMOD_TOOLS
+	select BR2_PACKAGE_HOST_MESON
+	select BR2_PACKAGE_HOST_NINJA
+	select BR2_PACKAGE_UTIL_LINUX
+	help
+	  Builds and installs the AESD Final Project:
+	    - aesdchar kernel module (char driver with circular buffer)
+	    - aesdsocket server (NVMe namespace management via socket CLI)
+	    - libnvme (built statically from submodule)
+	    - libparted (built statically from submodule)
+
+	  The socket server listens on port 9000 and accepts commands
+	  to create/remove NVMe namespaces and perform LBA reads/writes.
+
+config BR2_PACKAGE_AESD_CHAR_DRIVER
+	bool "aesd-char-driver (kernel module only)"
+	depends on BR2_LINUX_KERNEL
+	help
+	  Builds only the aesd character device kernel module with
+	  its circular buffer implementation.
+	  Useful if you want the driver without the full socket server.
+

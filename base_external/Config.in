@@ -1,0 +1,5 @@
+menu "AESD Packages"
+   # source "$BR2_EXTERNAL_assignment_base_PATH/package/aesd-assignments/Config.in"
+    source "$BR2_EXTERNAL_assignment_base_PATH/package/aesd-final-project/Config.in"
+endmenu
+
